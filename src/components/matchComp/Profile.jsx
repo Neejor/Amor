@@ -129,7 +129,7 @@ export default function (props) {
       props.setGroup([]);
       await db.collection("groups").doc(res_group.id).set(res_group);
       axios
-        .post("https://amor008.herokuapp.com/algo", { group: res_group })
+        .post("https://amor008.onrender.com/algo", { group: res_group })
         .then((res) => console.log(res.data));
       props.setGetData(Math.random() * 99);
     } else {
@@ -176,7 +176,6 @@ export default function (props) {
       <div className="profileImg">
         {/* <img src={props.profile.images[0]} alt="Profile" /> */}
         <img
-          style={{ opacity: 0 }}
           style={{ opacity: 0 }}
           src="https://i.dailymail.co.uk/1s/2019/02/11/04/9653178-6689819-image-m-107_1549859939216.jpg"
           alt=""

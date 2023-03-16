@@ -75,7 +75,7 @@ function App() {
       storeUser(user.uid);
       store.dispatch({ type: "loginBtn" });
       store.dispatch({ type: "signedIn", id: user.uid });
-      axios.post(`https://amor008.herokuapp.com/giveID`, {
+      axios.post(`https://amor008.onrender.com/giveID`, {
         id: user.uid,
       });
       setUserState(true);

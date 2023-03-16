@@ -11,7 +11,7 @@ import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import Loading from "../../spinLoad";
 
 export default function Chat() {
-  const socket = io("https://amor008.herokuapp.com");
+  const socket = io("https://amor008.onrender.com");
   const history = useHistory();
   let uid = useSelector((state) => state.user.id);
   let profile = useSelector((state) => state.user.data);
@@ -124,7 +124,7 @@ export default function Chat() {
   const clickChat = async (roomId, gmatchId) => {
     setConvLoaded(false);
     setMatchId(gmatchId);
-    axios.get(`https://amor008.herokuapp.com/rooms/${roomId}`).then((res) => {
+    axios.get(`https://amor008.onrender.com/rooms/${roomId}`).then((res) => {
       console.log(...res.data.messages);
       setMsg(res.data.messages);
       // setMsg(res)
